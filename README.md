@@ -7,20 +7,33 @@ One light weight category tool，make development easier
 
 before：
 ``` 
-
+UIButton *btn = [ [UIButton alloc] init] ;
+btn.frame = CGRectMake(100, 100, 100, 60);
+btn. backgroundColor = [UIColor blueColor] ;
+[btn setTitle:@"Click Me" forState :UIControlStateNormal] ;
+[btn setImage:[UIImage imageNamed:@"iconNormal"] forState :UIControlStateNormal];
+btn.layer.cornerRadius = 5;
+btn.layer.masksToBounds = YES ;
+btn.adjustsImageWhenDisabled = NO;
+btn.adjustsImageWhenHighlighted = NO
+[btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+[self.view addSubview:btn];
 ``` 
 
 useing: 
 ``` 
-
-``` 
-
-better: 
-``` 
 UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-btn.frame = CGRectMake(50, 100, 100, 60);
-btn.btnTitleState(@"Click Me",0).btnTitleNC([UIColor redColor]).btnTitleSC([UIColor blueColor]);
-[btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+btn.frameSe(100, 100, 100, 60)
+    .btnTitleState(@"Click Me",0)
+    .btnImgNC(@"iconNormal")
+    .btnImgSC(@"iconSelected")
+    .btnTitleNC([UIColor redColor])
+    .btnTitleSC([UIColor blueColor])
+    .cornerRadius(5.0)
+    .isMaskToBounds(YES)
+    .btnAdjustImgHighlight(NO)
+    .btnAdjustImgDisable(NO);
+btn.addTarget(self,@selector(btnClick:),UIControlEventTouchUpInside);
 [self.view addSubview:btn];
 ``` 
 
