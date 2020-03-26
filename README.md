@@ -6,6 +6,7 @@ One light weight category tool，make development easier
 简化代码 
 
 before：
+![OriginMethod](https://github.com/TargetNoBug/RookieTomatoPointCategory/blob/master/images/btnSystem.png?raw=true)
 ``` 
 UIButton *btn = [ [UIButton alloc] init] ;
 btn.frame = CGRectMake(100, 100, 100, 60);
@@ -21,6 +22,7 @@ btn.adjustsImageWhenHighlighted = NO
 ``` 
 
 useing: 
+![LightfulMethod](https://github.com/TargetNoBug/RookieTomatoPointCategory/blob/master/images/btnCategory.png?raw=true)
 ``` 
 UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
 btn.frameSe(100, 100, 100, 60)
